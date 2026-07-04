@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ROCK</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="world" aria-label="A quiet scene with a rock on an old sidewalk.">
+    <div class="light-layer" aria-hidden="true"></div>
+    <div class="rain-layer" aria-hidden="true"></div>
+    <div class="leaf-layer" aria-hidden="true"></div>
+    <div class="bug-layer" aria-hidden="true"></div>
+
+    <section class="sidewalk" aria-label="Old dirty city sidewalk">
+      <div class="joint joint-a"></div>
+      <div class="joint joint-b"></div>
+      <div class="joint joint-c"></div>
+
+      <div class="crack crack-a"></div>
+      <div class="crack crack-b"></div>
+      <div class="crack crack-c"></div>
+
+      <div class="weed weed-a"></div>
+      <div class="weed weed-b"></div>
+      <div class="weed weed-c"></div>
+
+      <div class="debris wrapper" aria-hidden="true"></div>
+      <div class="debris cigarette" aria-hidden="true"></div>
+      <div class="debris dirt dirt-a" aria-hidden="true"></div>
+      <div class="debris dirt dirt-b" aria-hidden="true"></div>
+      <div class="debris dirt dirt-c" aria-hidden="true"></div>
+      <div class="debris dogdoo" aria-hidden="true"></div>
+
+      <img class="rock" src="assets/rock.png" alt="Rock" draggable="false" />
+    </section>
+
+    <form id="question-form" autocomplete="off">
+      <label for="question-input">question?</label>
+      <div class="question-row">
+        <input id="question-input" name="question" type="text" maxlength="120" />
+        <button type="submit" aria-label="submit question">↵</button>
+      </div>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
