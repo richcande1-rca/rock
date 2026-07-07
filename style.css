@@ -22,9 +22,7 @@ body {
   position: relative;
   width: 100vw;
   height: 100vh;
-  background:
-    radial-gradient(circle at 50% 10%, rgba(255, 245, 210, 0.14), transparent 34%),
-    linear-gradient(180deg, #383b3d 0%, #222426 55%, #161718 100%);
+  background: #161718;
 }
 
 .light-layer {
@@ -49,180 +47,23 @@ body {
 
 .sidewalk {
   position: absolute;
-  inset: 16vh -4vw -8vh -4vw;
-  transform: perspective(850px) rotateX(58deg);
-  transform-origin: center bottom;
+  inset: 0;
+  transform: none;
+  transform-origin: center;
   background:
-    radial-gradient(circle at 18% 24%, rgba(20, 20, 18, 0.16) 0 1px, transparent 2px),
-    radial-gradient(circle at 61% 70%, rgba(255, 255, 255, 0.05) 0 1px, transparent 2px),
-    radial-gradient(circle at 82% 42%, rgba(0, 0, 0, 0.12) 0 2px, transparent 3px),
-    linear-gradient(90deg, rgba(0,0,0,0.18), transparent 18%, transparent 82%, rgba(0,0,0,0.15)),
-    #676862;
-  background-size: 26px 26px, 34px 34px, 47px 47px, 100% 100%, 100% 100%;
-  box-shadow: inset 0 36px 80px rgba(255,255,255,0.06), inset 0 -48px 100px rgba(0,0,0,0.28);
+    radial-gradient(circle at 50% 58%, transparent 0 28%, rgba(0, 0, 0, 0.18) 78%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.14), rgba(0, 0, 0, 0.38)),
+    url("assets/scene.jpg") center center / cover no-repeat,
+    #272827;
+  box-shadow: inset 0 0 120px rgba(0, 0, 0, 0.46);
 }
 
-.joint {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: rgba(30, 31, 29, 0.54);
-  box-shadow: 0 2px 0 rgba(255,255,255,0.04);
-}
-
-.joint-a { top: 28%; }
-.joint-b { top: 55%; }
-.joint-c { top: 79%; }
-
-.crack {
-  position: absolute;
-  height: 2px;
-  background: #262722;
-  opacity: 0.74;
-  transform-origin: left center;
-  filter: drop-shadow(0 1px 0 rgba(255,255,255,0.05));
-}
-
-.crack::before,
-.crack::after {
-  content: "";
-  position: absolute;
-  height: 2px;
-  background: #24251f;
-  transform-origin: left center;
-}
-
-.crack-a {
-  width: 28vw;
-  left: 18vw;
-  top: 43%;
-  transform: rotate(-8deg);
-}
-
-.crack-a::before {
-  width: 8vw;
-  left: 39%;
-  transform: rotate(42deg);
-}
-
-.crack-a::after {
-  width: 10vw;
-  left: 64%;
-  transform: rotate(-30deg);
-}
-
-.crack-b {
-  width: 19vw;
-  right: 19vw;
-  top: 66%;
-  transform: rotate(14deg);
-}
-
-.crack-b::before {
-  width: 6vw;
-  left: 54%;
-  transform: rotate(-53deg);
-}
-
-.crack-c {
-  width: 14vw;
-  left: 54vw;
-  top: 35%;
-  transform: rotate(22deg);
-  opacity: 0.45;
-}
-
-.weed {
-  position: absolute;
-  width: 2px;
-  height: 22px;
-  background: #334b27;
-  transform-origin: bottom;
-}
-
-.weed::before,
-.weed::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 2px;
-  height: 18px;
-  background: #405f2f;
-  transform-origin: bottom;
-}
-
-.weed::before { transform: rotate(-24deg); }
-.weed::after { transform: rotate(27deg); }
-
-.weed-a { left: 32vw; top: 43%; transform: rotate(-10deg); }
-.weed-b { left: 67vw; top: 66%; transform: rotate(7deg) scale(0.8); }
-.weed-c { left: 48vw; top: 79%; transform: rotate(-3deg) scale(0.55); opacity: 0.7; }
-
-.debris {
-  position: absolute;
-  pointer-events: none;
-}
-
-.wrapper {
-  left: 22vw;
-  top: 63%;
-  width: 58px;
-  height: 30px;
-  background:
-    linear-gradient(135deg, rgba(255,255,255,0.5), rgba(180,180,172,0.14)),
-    repeating-linear-gradient(90deg, transparent 0 10px, rgba(0,0,0,0.06) 10px 12px);
-  transform: rotate(-17deg) skew(-9deg);
-  border-radius: 4px 12px 3px 9px;
-  opacity: 0;
-  transition: opacity 8s ease;
-}
-
-.cigarette {
-  right: 28vw;
-  top: 51%;
-  width: 54px;
-  height: 7px;
-  border-radius: 999px;
-  background: linear-gradient(90deg, #d7d3bd 0 70%, #9b7440 70% 84%, #4b4335 84%);
-  transform: rotate(13deg);
-  opacity: 0;
-  transition: opacity 8s ease;
-}
-
-.dirt {
-  width: 11px;
-  height: 7px;
-  border-radius: 50%;
-  background: rgba(37, 31, 24, 0.32);
-}
-
-.dirt-a { left: 60vw; top: 48%; }
-.dirt-b { left: 39vw; top: 59%; transform: scale(1.4); }
-.dirt-c { left: 72vw; top: 75%; transform: scale(0.8); }
-
-.dogdoo {
-  left: 78vw;
-  top: 68%;
-  width: 38px;
-  height: 18px;
-  border-radius: 50% 60% 45% 55%;
-  background: #3f3022;
-  box-shadow: 8px -3px 0 -2px #4a3726, 14px -7px 0 -4px #5b432d;
-  opacity: 0;
-  transition: opacity 12s ease;
-}
-
+.joint,
+.crack,
+.weed,
+.debris,
 .rock {
-  position: absolute;
-  left: calc(50% - 72px);
-  top: 52%;
-  width: 144px;
-  height: auto;
-  transform: rotateX(-58deg) translateY(-14px);
-  transform-origin: center bottom;
-  user-select: none;
-  filter: drop-shadow(14px 24px 14px var(--rock-shadow));
+  display: none;
 }
 
 .rain-layer,
@@ -329,20 +170,9 @@ button:hover {
   border-color: rgba(245, 245, 235, 0.28);
 }
 
-.show-wrapper .wrapper,
-.show-cigarette .cigarette,
-.show-dogdoo .dogdoo {
-  opacity: 0.8;
-}
-
 @media (max-width: 700px) {
-  .sidewalk {
-    inset: 11vh -22vw -7vh -22vw;
-  }
-
-  .rock {
-    left: calc(50% - 54px);
-    width: 108px;
+  #question-form {
+    width: min(210px, calc(100vw - 28px));
   }
 }
 
